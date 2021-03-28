@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="Demo_DI" customModuleProvider="target">
+            <connections>
+                <outlet property="messageSendButton" destination="oGJ-Jv-ca4" id="tcF-08-I86"/>
+                <outlet property="messageTextField" destination="4HX-do-qmW" id="kgj-FG-tXI"/>
+                <outlet property="tableView" destination="6Rc-nd-fgQ" id="O9R-Td-tTf"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fhb-BF-ITs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Rc-nd-fgQ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="746"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4HX-do-qmW">
+                    <rect key="frame" x="8" y="806" width="290" height="40"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8Vo-X4-EhY"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGJ-Jv-ca4">
+                    <rect key="frame" x="306" y="806" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="aNV-Ho-OZv"/>
+                        <constraint firstAttribute="width" constant="100" id="ee0-IE-dFZ"/>
+                    </constraints>
+                    <state key="normal" title="Send"/>
+                    <connections>
+                        <action selector="sendButtonClicked" destination="-1" eventType="touchUpInside" id="b9B-gA-1di"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6Rc-nd-fgQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="95q-cN-1ky"/>
+                <constraint firstItem="oGJ-Jv-ca4" firstAttribute="leading" secondItem="4HX-do-qmW" secondAttribute="trailing" constant="8" id="Fl4-a0-PSK"/>
+                <constraint firstItem="4HX-do-qmW" firstAttribute="top" secondItem="6Rc-nd-fgQ" secondAttribute="bottom" constant="16" id="Gqu-Wg-gnH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4HX-do-qmW" secondAttribute="bottom" constant="16" id="J3a-GN-jBU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6Rc-nd-fgQ" secondAttribute="trailing" id="NWz-Qb-dyV"/>
+                <constraint firstItem="4HX-do-qmW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Qnd-tW-aEn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oGJ-Jv-ca4" secondAttribute="bottom" constant="16" id="Tv6-O7-30J"/>
+                <constraint firstItem="6Rc-nd-fgQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VFO-HM-4d5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oGJ-Jv-ca4" secondAttribute="trailing" constant="8" id="zUi-Yq-OLw"/>
+            </constraints>
+            <point key="canvasLocation" x="66.666666666666671" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
